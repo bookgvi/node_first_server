@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>SSR in action</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>This is main page</h1>
+  <h1 class="mt-3">This is main page</h1>
+  <div id="app" class="container">
+    <div class="ro">
+      <div class="col">
+        {{ hello }}
+      </div>
+    </div>
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        hello: 'Holly, Vue!!!'
+      }
+    })
+  </script>
 </body>
 </html>
